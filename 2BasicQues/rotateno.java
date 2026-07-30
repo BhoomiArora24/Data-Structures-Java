@@ -7,27 +7,32 @@ public class rotateno {
         int k = scn.nextInt();
         int nod = 0;
         int temp = n;
-        while (temp != 0) {
-            temp = temp / 10;
+        while(temp!=0){
+            temp = temp/10;;
             nod++;
         }
-
-        int no = 0;
         System.out.println(nod);
-        while (n != 0) {
-            if (k != 0) {
-                int r = n % 10;
-                no = no + r * (int) Math.pow(10, nod - 1);
-                nod--;
-                k--;
-                n=n/10;
-            }else{
-                int q = n/10;
-                no = no + q * (int) Math.pow(10, nod - 1);
-                nod--;
-                n=n/10;
-            }
+
+        int res = 0;
+
+        k %= nod;
+
+        if(k<0){
+            k += nod;
         }
 
+        int dig = nod;
+        while(n!=0){
+            int r = n%10;
+            n=n/10;
+            if(k!=0){
+                res = res + (r * (int)Math.pow(10, nod - k));
+                k--;
+            }else{
+                res = res + (r * (int)Math.pow(10, nod - dig));
+                dig--;
+            }
+        }
+        System.out.println(res);
     }
 }
