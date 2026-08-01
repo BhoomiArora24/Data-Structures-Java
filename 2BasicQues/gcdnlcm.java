@@ -6,26 +6,24 @@ public class gcdnlcm {
         int num1 = scn.nextInt();
         int num2 = scn.nextInt();
 
-        int sm = 0;
+        int divident = num1;
+        int divisor = num2;
 
-        if (num1 < num2) {
-            sm = num1;
-        } else {
-            sm = num2;
+        while(divident%divisor != 0){
+            int rem = divident%divisor;
+            divident = rem;
+            divisor = divident;
         }
 
-        int GCD = 0;
-        int LCM = 0;
+        int gcd = divident;
 
-        while (num1 != 1 && num2 != 1) {
+        System.out.println(gcd);
 
-            for (int i = 2; i < sm; i++) {
-                if (num1 % i == 0 && num2 % i == 0) {
-                    num1 /= i;
-                    num2 /= i;
-                    LCM = i 
-                }
-            }
-        }
+        int lcm = 0;
+
+        lcm = (num1 * num2)/gcd;
+
+        System.out.println(lcm);
+
     }
 }
