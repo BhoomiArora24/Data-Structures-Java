@@ -11,8 +11,8 @@ public class gcdnlcm {
 
         while(divident%divisor != 0){
             int rem = divident%divisor;
-            divident = rem;
-            divisor = divident;
+            divisor = rem;
+            divident = divisor;
         }
 
         int gcd = divident;
