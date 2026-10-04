@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class arrayStart {
     public static void main(String[] args) {
         int[] arr = new int[5];
@@ -18,8 +19,10 @@ public class arrayStart {
         one[1] = 17;
         one[2] = 15;
 
-        int[] two = one;
+        int[] two = one.clone();
+        int[] three = Arrays.copyOf(one, one.length);
         two[2] = 590;
+        three[1] = 56;
 
         for (int i = 0; i<one.length; i++){
             System.out.println(one[i]);
@@ -27,6 +30,10 @@ public class arrayStart {
 
         for (int i = 0; i<two.length; i++){
             System.out.println(two[i]);
+        }
+
+        for (int i = 0; i<three.length; i++){
+            System.out.println(three[i]);
         }
     }
 }
