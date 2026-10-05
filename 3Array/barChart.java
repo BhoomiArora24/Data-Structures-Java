@@ -21,10 +21,12 @@ public class barChart {
             }
         }
 
-        for(int i = max; i >= 0 ; i--){
+        System.out.println(max);
+
+        for(int i = max; i >= 1 ; i--){
             for(int j = 0; j < arr.length; j++){
                 if(arr[j] >= i){
-                    System.out.print("*");
+                    System.out.print("*\t");
                 }else{
                     System.out.print("\t");
                 }

@@ -24,12 +24,12 @@ public abstract class SumTwoArr {
         }
 
         
-        int[] result = new int[n1 > n2? n1: n2];
+        int[] result = new int[n1 > n2 ? n1 : n2];
         int c = 0;
-
+        
         int i = arr1.length - 1;
         int j = arr2.length - 1;
-        int k = result.length -1;
+        int k = result.length - 1;
 
         while(k >= 0){
             int d = c;
@@ -53,11 +53,11 @@ public abstract class SumTwoArr {
         }
 
         if(c != 0){
-            System.out.println(c);
+            System.out.print(c);
         }
 
-        for(int val: result){
-            System.out.println(val);
+        for(int val : result){
+            System.out.print(val);
         }
     }
 }
